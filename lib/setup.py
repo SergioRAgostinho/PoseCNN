@@ -120,7 +120,12 @@ ext_modules = [
                                      '-c',
                                      '--compiler-options',
                                      "'-fPIC'"]},
-        include_dirs = [numpy_include, CUDA['include'], '/usr/local/include/eigen3']
+        include_dirs = [
+            numpy_include,
+            CUDA['include'],
+            '/usr/local/include/eigen3',
+            "../3rdparty/include/eigen3",
+        ]
     ),
     Extension(
         "utils.cython_bbox",
